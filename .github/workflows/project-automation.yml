@@ -1,0 +1,29 @@
+name: Project Automation
+
+on:
+  pull_request:
+    types: [opened, closed, reopened, labeled, unlabeled, assigned]
+  issues:
+    types: [opened, closed, assigned]
+
+jobs:
+  move_card:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run move script
+        env:
+          GITHUB_TOKEN: ${{ secrets.PROJECT_TOKEN }}
+          REPO: ${{ github.repository }}
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+          PR_MERGED: ${{ github.event.pull_request.merged || 'false' }}
+        run: |
+          python3 - <<'PY'
+import os, sys, json, requests
+token = os.getenv('GITHUB_TOKEN')
+repo = os.getenv('REPO')
+evt = os.getenv('GITHUB_EVENT_NAME')
+hdr = {'Authorization':f'token {token}','Accept':'application/vnd.github.inertia-preview+json'}
+# Este script es minimal; si usas Projects classic debes obtener project card id y mover.
+print("Event:", evt)
+# Placeholder: logica avanzada requiere IDs concretos del Project; configuralo manualmente.
+PY
