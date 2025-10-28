@@ -1,22 +1,25 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <title>Gestor de Tareas</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <title>App Colaborativa - Frontend simple</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main>
-    <h1>Gestor de Tareas</h1>
+  <main class="container">
+    <h1>App Colaborativa - Tareas</h1>
 
     <form id="taskForm">
-      <input type="text" id="taskInput" placeholder="Nueva tarea..." required />
+      <input id="title" placeholder="Nueva tarea" required />
       <button type="submit">Agregar</button>
     </form>
 
-    <ul id="taskList"></ul>
-  </main>
+    <ul id="tasks"></ul>
 
-  <script src="script.js"></script>
+    <footer>
+      <small>API: <span id="apiUrl">/api</span></small>
+    </footer>
+  </main>
+  <script src="app.js"></script>
 </body>
 </html>

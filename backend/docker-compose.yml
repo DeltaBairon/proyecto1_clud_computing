@@ -1,7 +1,36 @@
-version: "3.8"
+version: '3.8'
+
 services:
-  web:
+  backend:
     build: .
+    container_name: backend_app
     ports:
       - "3000:3000"
-    restart: unless-stopped
+    volumes:
+      - .:/app
+    restart: always
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/colabdb
+
+  frontend:
+    image: nginx:alpine
+    container_name: frontend_app
+    ports:
+      - "8080:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html
+    depends_on:
+      - backend
+
+  mongo:
+    image: mongo:6
+    container_name: mongo_db
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
