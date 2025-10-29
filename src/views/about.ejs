@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('partials/header') %>
+    <title>Page Not found</title>
+</head>
+
+<body>
+
+
+  <%- include('partials/navigation') %>
+
+    <div class="container p-4">
+      <div class="col-md-4 offset-md-4">
+        <div class="card card-body">
+          <h1>
+            About Express Books App
+          </h1>
+
+          <p>
+            This is a simple CRUD application built with Node.js, Express, and JSON file.
+            The idea is to create a simple application that allows users to create, read, update, and delete books. and you can use this application to test deployments on cloud platforms like Heroku, AWS, Azure, etc. The application is open-source and you can find the source code on GitHub.
+          </p>
+
+          <p>
+            APPID:
+            <strong style="font-size: 3rem;">
+              <% if (APPID) { %>
+                <%= APPID %>
+              <% } else { %> 
+                <%= 'APPID not found' %>
+              <% } %>
+            </strong>
+          </p>
+
+          <p>
+            HTTP PORT:
+            <strong>
+              <%= PORT %>
+            </strong>
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+</body>
+
+</html>
