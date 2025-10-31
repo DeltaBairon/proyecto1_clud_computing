@@ -9,7 +9,7 @@ Express Tasks es una aplicación web que permite registrar tareas para el contro
 # Instalación
 
 ```shell
-git clone https://github.com/FaztTech/books-express
+https://github.com/DeltaBairon/proyecto1_clud_computing
 npm install
 npm run build
 npm start
