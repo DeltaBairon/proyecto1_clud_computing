@@ -32,27 +32,27 @@ Esta aplicación permite gestionar notas o tareas a través de una interfaz web 
 ## ⚙️ Estructura del Proyecto
 ├── src/
 │   ├── controllers/
-│   │   └── index.controller.js       # Controladores principales (lógica CRUD)
+│   │   └── index.controller.js       
 │   ├── routes/
-│   │   └── index.js                  # Definición de rutas y endpoints
+│   │   └── index.js                  
 │   ├── views/
-│   │   ├── partials/                 # Fragmentos EJS reutilizables
-│   │   ├── index.ejs                 # Página principal (lista de tareas)
-│   │   ├── new-entry.ejs             # Formulario para nuevas notas
-│   │   ├── about.ejs                 # Página informativa
-│   │   └── 404.ejs                   # Página de error
+│   │   ├── partials/                
+│   │   ├── index.ejs                
+│   │   ├── new-entry.ejs            
+│   │   ├── about.ejs                
+│   │   └── 404.ejs                  
 │   ├── public/css/
-│   │   └── main.css                  # Estilos generales
-│   ├── books.json                    # Archivo JSON usado como base de datos local
-│   ├── config.js                     # Configuración global del proyecto
-│   └── app.js                        # Inicialización del servidor Express
+│   │   └── main.css                  
+│   ├── books.json                    
+│   ├── config.js                    
+│   └── app.js                        
 ├── test/
-│   └── basic.test.js                 # Pruebas unitarias básicas
-├── Dockerfile                        # Imagen Docker para despliegue
-├── .gitlab-ci.yml                    # Pipeline CI/CD (GitLab)
-├── .github/workflows/javascript.yml  # Workflow GitHub Actions
-├── package.json                      # Dependencias y scripts de npm
-├── README.md                         # Documentación del proyecto
+│   └── basic.test.js                 
+├── Dockerfile                       
+├── .gitlab-ci.yml                   
+├── .github/workflows/javascript.yml 
+├── package.json                      
+├── README.md                         
 
 ## 💡 Funcionamiento General
 El sistema implementa un flujo CRUD simple (Create, Read, Delete) sobre un archivo JSON. Los controladores en `src/controllers/index.controller.js` manejan las peticiones y renderizan vistas dinámicas mediante EJS.  
