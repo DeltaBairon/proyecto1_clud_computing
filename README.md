@@ -1,12 +1,12 @@
-# Express Books
+# Express Tasks
 
-Express Books is Web Application to save a list of your favorite books. All data are store in a Json file.
+Express Tasks es una aplicación web que permite registrar tareas para el control de las actividades diarias de las personas de manera autónoma.
 
 # ScreenShoot
 
-![Express Books](docs/screenshot.png)
+![Express Tasks ](docs/screenshot.png)
 
-# Installation
+# Instalación
 
 ```shell
 git clone https://github.com/FaztTech/books-express
