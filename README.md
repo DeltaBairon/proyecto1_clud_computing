@@ -81,7 +81,7 @@ El proyecto está pensado para ejecutarse en plataformas cloud como **Heroku, Re
 ## 🧪 Ejecución Local
 ```bash
 # Clonar el repositorio
-git clone https://github.com/tuusuario/task-notes-manager.git
+git clone https://github.com/DeltaBairon/proyecto1_clud_computing.git
 cd task-notes-manager
 
 # Instalar dependencias
