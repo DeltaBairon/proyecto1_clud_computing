@@ -4,7 +4,7 @@ Express Tasks es una aplicación web que permite registrar tareas para el contro
 
 # ScreenShoot
 
-![Express Tasks ](docs/Try.png)
+![Express Tasks ](docs/Try.jpg)
 
 # Instalación
 
